@@ -47,5 +47,3 @@ export interface Launch {
     wikipedia: string
   }
 }
-
-

@@ -1,4 +1,4 @@
-import {Launch, LaunchDto} from "./models"
+import { Launch, LaunchDto } from "./models"
 
 export const mapLaunch = (launch: LaunchDto): Launch => ({
   id: launch.id,

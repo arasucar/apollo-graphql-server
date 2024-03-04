@@ -11,7 +11,13 @@
     "type": "git",
     "url": "git+https://github.com/arasucar/apollo-graphql-server.git"
   },
-  "keywords": ["Apollo", "GraphQL", "Node.js", "Typescript", "SpaceX"],
+  "keywords": [
+    "Apollo",
+    "GraphQL",
+    "Node.js",
+    "Typescript",
+    "SpaceX"
+  ],
   "author": "Aras Ucar",
   "license": "ISC",
   "bugs": {
@@ -27,6 +33,7 @@
   "devDependencies": {
     "@types/node": "^20.11.24",
     "nodemon": "^3.1.0",
+    "prettier": "^3.2.5",
     "typescript": "^5.3.3"
   }
 }
