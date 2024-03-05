@@ -4,7 +4,6 @@
   "description": "An Apollo GraphQL service that fetches the launch data from the SpaceX REST API.",
   "main": "index.js",
   "scripts": {
-    "compile": "tsc",
     "start": "nodemon"
   },
   "repository": {
