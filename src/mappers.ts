@@ -11,7 +11,13 @@ export const mapLaunch = (launch: LaunchDto): Launch => ({
   recovered: launch.fairings?.recovered,
   failures: launch.failures,
   rocket: {
-    id: launch.rocket
+    id: launch.rocket?.id,
+    name: launch.rocket?.name,
+    description: launch.rocket?.description,
+    company: launch.rocket?.company,
+    country: launch.rocket?.country,
+    wikipedia: launch.rocket?.wikipedia,
+    images: launch.rocket?.flickr_images
   },
   links: {
     images: launch.links?.flickr?.original,

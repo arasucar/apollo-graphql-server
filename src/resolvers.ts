@@ -1,11 +1,16 @@
 import { mapLaunch } from "./mappers.js"
-import { LaunchDto } from "./models"
+import { LaunchQueryResponse } from "./models"
 
 export default {
   Query: {
     launches: async (_, __, { dataSources }) => {
-      const launches: LaunchDto[] = await dataSources.launchAPI.getLaunches()
-      return launches.map((launch) => mapLaunch(launch))
+      const response: LaunchQueryResponse = await dataSources.launchAPI.queryLaunches(__.query, {
+        populate: "rocket",
+        limit: 10,
+        offset: 0,
+        ...__.options
+      })
+      return response.docs?.map((launch) => mapLaunch(launch))
     }
   }
 }
