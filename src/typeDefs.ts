@@ -37,15 +37,7 @@ export default `#graphql
     wikipedia: String
   }
   
-  input QueryInput {
-    name: String
-    rocket: QueryRocketInput
-  }
-  
-  input QueryRocketInput {
-    name: String  
-  }
-  
+  "Sort input object to use in API request body."
   input SortInput {
     id: Int
     name: Int
@@ -55,6 +47,7 @@ export default `#graphql
     success: Int
   }
   
+  "Options input object to use in API request body."
   input OptionsInput {
     sort: SortInput
     limit: Int,
@@ -62,7 +55,7 @@ export default `#graphql
   }
     
   type Query {
-    # Returns list of launches
-    launches(query: QueryInput, options: OptionsInput): [Launch]
+    # Returns list of launches according to the filters.
+    launches(queryJSON: String, options: OptionsInput): [Launch]
   }
 `
