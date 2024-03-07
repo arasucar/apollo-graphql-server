@@ -1,7 +1,8 @@
 {
   "name": "apollo-graphql-server",
   "version": "1.0.0",
-  "description": "An Apollo GraphQL service that fetches the launch data from the SpaceX REST API.",
+  "description": "An Apollo GraphQL server that fetches the launch data from the SpaceX REST API.",
+  "author": "Aras Ucar",
   "main": "index.js",
   "scripts": {
     "start": "nodemon"
@@ -14,11 +15,9 @@
     "Apollo",
     "GraphQL",
     "Node.js",
-    "Typescript",
+    "TypeScript",
     "SpaceX"
   ],
-  "author": "Aras Ucar",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/arasucar/apollo-graphql-server/issues"
   },

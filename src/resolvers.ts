@@ -1,4 +1,4 @@
-import { mapLaunch } from "./mappers.js"
+import { mapResponse } from "./mappers.js"
 import { LaunchQueryResponse } from "./models"
 
 export default {
@@ -10,7 +10,7 @@ export default {
         offset: 0,
         ...__.options
       })
-      return response.docs?.map((launch) => mapLaunch(launch))
+      return mapResponse(response)
     }
   }
 }

@@ -1,5 +1,13 @@
 export default `#graphql
-  "Some fields that describe Launch resource on SpaceX REST API."
+  type LaunchesResponse {
+    results: [Launch]
+    totalCount: Int
+    totalPages: Int
+    page: Int
+    hasNextPage: Boolean
+  }
+
+  "Some fields that describe Launch resource on SpaceX REST API." 
   type Launch {
     id: String!
     name: String!
@@ -56,6 +64,6 @@ export default `#graphql
     
   type Query {
     # Returns list of launches according to the filters.
-    launches(queryJSON: String, options: OptionsInput): [Launch]
+    launches(queryJSON: String, options: OptionsInput): LaunchesResponse
   }
 `

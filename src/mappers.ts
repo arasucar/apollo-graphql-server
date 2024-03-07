@@ -1,5 +1,4 @@
-import { Launch, LaunchDto } from "./models"
-
+import { Launch, LaunchDto, LaunchesResponse, LaunchQueryResponse } from "./models"
 export const mapLaunch = (launch: LaunchDto): Launch => ({
   id: launch.id,
   name: launch.name,
@@ -24,4 +23,12 @@ export const mapLaunch = (launch: LaunchDto): Launch => ({
     patch: launch.links?.patch?.large,
     wikipedia: launch.links?.wikipedia
   }
+})
+
+export const mapResponse = (dto: LaunchQueryResponse): LaunchesResponse => ({
+  results: dto.docs.map((doc) => mapLaunch(doc)),
+  totalCount: dto.totalDocs,
+  totalPages: dto.totalPages,
+  page: dto.page,
+  hasNextPage: dto.hasNextPage
 })

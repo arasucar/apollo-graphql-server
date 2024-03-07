@@ -1,4 +1,4 @@
-// Interface definition of a response of the query API.
+// Interface definition of a response from the SpaceX API.
 export interface LaunchQueryResponse {
   docs: LaunchDto[]
   totalDocs: number
@@ -13,7 +13,16 @@ export interface LaunchQueryResponse {
   nextPage: number
 }
 
-// Interface definition of the Launch object returned from the API.
+// Interface definition of a final response that will be returned from the service.
+export interface LaunchesResponse {
+  results: Launch[]
+  totalCount: number
+  totalPages: number
+  page: number
+  hasNextPage: boolean
+}
+
+// Interface definition of the resulting Launch object.
 export interface LaunchDto {
   id: string
   name: string
